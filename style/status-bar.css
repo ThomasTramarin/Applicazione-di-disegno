@@ -1,0 +1,151 @@
+.status-bar {
+  height: 5vh;
+  background-color: var(--bg-1);
+  border: solid var(--border-color-2) 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+.status-bar i {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.status-left{
+  display: flex;
+  flex-direction: row;
+  height: 5vh;
+  align-items: center;
+}
+
+.status-bar #cursor-coord,
+.status-bar #canvas-dimension {
+  font-size: 12px;
+  margin-left: 5px;
+  color: var(--text-color);
+}
+
+.status-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+}
+
+#cursor-coord-container {
+  width: 125px;
+}
+
+/*Canvas Dimension*/
+#canvas-dimension-container {
+  width: 175px;
+}
+
+#canvas-dimension-container i {
+  cursor: default;
+  margin-left: 5px;
+  color: var(--text-color);
+}
+
+/*Zoom*/
+
+.status-right{
+  width: 320px;
+}
+.zoom-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.zoom-input-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.zoom-input-container div:nth-child(2){
+  display: flex;
+  align-items: center;
+}
+
+#zoom-minus, #zoom-plus{
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#zoom-minus:hover, #zoom-plus:hover{
+  background-color: var(--bg-button-hover);
+}
+
+#initial-scale{
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+#initial-scale:hover{
+  background-color: var(--bg-button-hover);
+  border-radius: 5px;
+}
+
+#zoom-select{
+  padding: 4px;
+  border-radius: 5px;
+  background-color: var(--bg-input);
+  color: var(--text-color);
+}
+
+
+/*Range*/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #9A9A9A;
+  border-radius: 5px;
+  height: 3px;
+}
+
+input[type="range"]::-moz-range-track {
+  background: #9A9A9A;
+  border-radius: 5px;
+  height: 3px;
+}
+
+
+::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--selected);
+  margin-top: -6px;
+}
+
+::-moz-range-thumb{
+  -webkit-appereance: none;
+  width: 6px;
+  height: 6px;
+  margin-top: -6px;
+}
+
+/*Autosave status*/
+#autosave-status{
+  padding: 0 10px;
+  display: none;
+}
+
+#autosave-status span{
+  color: var(--text-color);
+  font-size: 0.8rem;
+}
+
+
+
+

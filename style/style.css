@@ -1,0 +1,278 @@
+/*CSS Reset*/
+body,
+html {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.1;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  padding-left: 20px;
+  line-height: 1.5;
+}
+
+img {
+  height: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+}
+
+h2 {
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+
+h3 {
+  color: var(--text-color);
+}
+
+p {
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--body-bg);
+}
+
+input, select{
+  outline: none;
+}
+
+i{
+  color: var(--text-color);
+}
+
+label{
+  color: var(--text-color);
+}
+
+
+/*!Variables*/
+/*Variables DARK THEME*/
+:root.dark-theme {
+  --bg-1: #202020;
+  --bg-2: #272727;
+  --text-color: #ffffff;
+  --border-color-1: #1C1C1C;
+  --border-color-2: #3C373D;
+  --scrollbar-track: #2C2C2C;
+  --scrollbar-thumb: #9F9F9F;
+  --bg-input: #707070;
+  --bg-button: #808080;
+  --bg-button-hover: #6b6a6a;
+  --selected: #9A505C;
+  --tr-bg: #2f2f30;
+  --tr-bg-hover: #545555;
+  --tr-bg-selected: #656467;
+}
+
+/*Variables LIGHT THEME*/
+:root.light-theme {
+  --bg-1: #f3f3f3;
+  --bg-2: #f9f9f9;
+  --text-color: #000000;
+  --border-color-1: #eaeaea;
+  --border-color-2: #dbdbdb;
+  --scrollbar-track: #FAFAFA;
+  --scrollbar-thumb: #8A8A8A;
+  --bg-input: #f0f0f0;
+  --bg-button: #ccc;
+  --bg-button-hover: #bababa;
+  --selected: #9A505C;
+  --tr-bg: #e6e6e6;
+  --tr-bg-hover: #c3c3c3;
+  --tr-bg-selected: #afafaf;
+}
+
+/*Container*/
+.container {
+  width: 90%;
+}
+
+/*Tools Board*/
+.tools-board {
+  background-color: var(--bg-2);
+  width: 100%;
+  height: 15vh;
+  border-top: solid var(--border-color-1) 1px;
+  border-bottom: solid var(--border-color-1) 1px;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+}
+
+
+/*Navbar*/
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5vh;
+  background-color: var(--bg-1);
+}
+
+.navbar ul{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-logo{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-right: 10px
+}
+
+.navbar-logo img{
+  height: 80%;
+}
+
+.navbar-logo span{
+  color: var(--text-color);
+  font-size: 13px;
+}
+
+.navbar ul li i, .navbar ul li svg {
+  width: 20px;
+  color: var(--text-color);
+}
+
+/*Canvas*/
+.canvas-container {
+  height: 75vh;
+  background-color: var(--bg-1);
+  padding: 15px;
+  overflow: auto;
+  display: grid;
+  place-items: center;
+}
+
+.canvas-container canvas {
+  border: solid var(--border-color-2) 1px;
+  cursor: crosshair;
+  background-color: #ffffff;
+  transform-origin: top left;
+}
+
+/*General Error*/
+
+#general-info{
+  width: 275px;
+  height: 100px;
+  border-radius: 10px;
+  position: absolute;
+  right: 15px;
+  bottom: calc(15px + 5vh);
+  padding: 10px;
+  font-weight: bold;
+  color: var(--text-color);
+  transition: opacity 0.3s ease-in-out, transform 1s ease-in-out; 
+  z-index: 100;
+}
+
+body{
+  overflow: hidden;
+}
+
+.open{
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.close{
+  transform: translateX(120%);
+  opacity: 0;
+}
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 10px;
+}
+
+/*Utilities*/
+.svg-icon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.vertical-divider-60 {
+  height: 60%;
+  width: 1px;
+  background-color: var(--border-color-2);
+}
+
+.vertical-divider-90 {
+  height: 90%;
+  width: 1px;
+  background-color: var(--border-color-2);
+}
+
+/*Overlay*/
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 99;
+}
