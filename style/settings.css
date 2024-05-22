@@ -81,7 +81,7 @@
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-image: url("/svg/sun.svg");
+  background-image: url("../svg/sun.svg");
   transition: .4s;
   border-radius: 50%;
 }
@@ -92,7 +92,7 @@ input:checked+.slider-switch-mode {
 
 input:checked+.slider-switch-mode:before {
   transform: translateX(26px);
-  background: url("/svg/moon.svg");
+  background: url("../svg/moon.svg");
 }
 
 .slider-switch-mode.round {

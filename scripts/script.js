@@ -125,7 +125,7 @@ downloadManualBtn.addEventListener("click", () => {
   const link = document.createElement("a");
   link.download = "Manuale_d'uso_Applicazione-di-disegno.pdf";
 
-  link.href = "../src/Manuale_d'uso_Applicazione-di-disegno.pdf";
+  link.href = "./src/Manuale_d'uso_Applicazione-di-disegno.pdf";
 
   link.click();
 });
