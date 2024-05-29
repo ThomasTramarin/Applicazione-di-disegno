@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Applicazione di disegno</title>
     <meta name="author" content="Thomas Tramarin">
+    <meta name="description" content="L'applicazione di disegno è uno strumento intuitivo e potente per creare opere d'arte digitali. Con una vasta gamma di pennelli, colori e strumenti, esplora la tua creatività e realizza disegni sorprendenti. Semplice da usare e ricca di funzionalità, è perfetta per disegnare, dipingere, annotare e molto altro ancora.">
     <link rel="icon" href="src/logo.png">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -19,16 +20,16 @@
 
 <body>
     <!-- Navbar -->
-    <div class="navbar">
+    <nav class="navbar" tabindex="1">
         <ul>
-            <li onclick="showSection('home-section')" class="navbar-item" title="Pagina Home"><svg
+            <li onclick="showSection('home-section')" class="navbar-item button-focus-div" title="Pagina Home" tabindex="2"><svg
                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                 </svg>
             </li>
-            <li onclick="showSection('settings-section')" class="navbar-item" title="Impostazioni"><svg
+            <li onclick="showSection('settings-section')" class="navbar-item button-focus-div" title="Impostazioni" tabindex="3"><svg
                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -36,27 +37,27 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                 </svg>
             </li>
-            <li title="Salva (Ctrl + S)" id="save-img"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+            <li title="Salva (Ctrl + S)" id="save-img" class="button-focus-div" tabindex="4"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
                 </svg>
             </li>
-            <li id="save-section" title="Finestra di Salvataggio">
+            <li id="save-section" title="Finestra di Salvataggio" tabindex="5" class="button-focus-div">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 0 0-1.883 2.542l.857 6a2.25 2.25 0 0 0 2.227 1.932H19.05a2.25 2.25 0 0 0 2.227-1.932l.857-6a2.25 2.25 0 0 0-1.883-2.542m-16.5 0V6A2.25 2.25 0 0 1 6 3.75h3.879a1.5 1.5 0 0 1 1.06.44l2.122 2.12a1.5 1.5 0 0 0 1.06.44H18A2.25 2.25 0 0 1 20.25 9v.776" />
                 </svg>
             </li>
-            <li id="undo-btn" title="Annulla (Ctrl + Z)" class="navbar-item"><svg class="svg-icon"
+            <li id="undo-btn" title="Annulla (Ctrl + Z)" class="navbar-item button-focus-div" tabindex="6"><svg class="svg-icon" 
                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
                 </svg>
             </li>
-            <li id="redo-btn" title="Ripeti (Ctrl + Y)" class="navbar-item"><svg class="svg-icon"
+            <li id="redo-btn" title="Ripeti (Ctrl + Y)" class="navbar-item button-focus-div" tabindex="7"><svg class="svg-icon"
                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -67,9 +68,9 @@
 
         <div class="navbar-logo">
             <span>Applicazione di disegno</span>
-            <img src="src/logo.png" alt="logo">
+            <img src="src/logo.png" alt="Immagine logo dell'applicazione di disegno">
         </div>
-    </div>
+    </nav>
 
     <!-- Tools Board -->
     <div class="tools-board">
@@ -78,7 +79,7 @@
         <div class="sections" id="home-section">
             <div class="sizes-container">
                 <div>
-                    <select name="sizes" id="sizes" title="Imposta dimensione (Ctrl + I) (Ctrl + O)">
+                    <select name="sizes" id="sizes" title="Imposta dimensione (Ctrl + I) (Ctrl + O)" tabindex="8">
                         <option value="1">1px</option>
                         <option value="3">3px</option>
                         <option value="8">8px</option>
@@ -99,12 +100,12 @@
                 <div class="color-container-2">
                     <div class="color-pickers">
                         <div>
-                            <input type="color" class="color-picker" id="color-picker-1" title="Imposta colore">
-                            <input type="color" class="color-picker" id="color-picker-2" title="Imposta colore">
+                            <input type="color" class="color-picker" id="color-picker-1" title="Imposta colore 1" tabindex="9">
+                            <input type="color" class="color-picker" id="color-picker-2" title="Imposta colore 2" tabindex="10">
                         </div>
                         <div>
-                            <input type="color" class="color-picker" id="color-picker-3" title="Imposta colore">
-                            <input type="color" class="color-picker" id="color-picker-4" title="Imposta colore">
+                            <input type="color" class="color-picker" id="color-picker-3" title="Imposta colore 3" tabindex="11">
+                            <input type="color" class="color-picker" id="color-picker-4" title="Imposta colore 4" tabindex="12">
                         </div>
                     </div>
                     <p>Colori</p>
@@ -113,13 +114,13 @@
             <div class="vertical-divider-90"></div>
             <div class="current-modality-container">
                 <div class="current-modality">
-                    <button class="current-modality-btn" id="brush-mode" title="Modalità Pennello (Ctrl + F)"><i
+                    <button class="current-modality-btn" id="brush-mode" title="Modalità Pennello (Ctrl + F)" tabindex="13"><i
                             class="fa-solid fa-paintbrush"></i></button>
-                    <button class="current-modality-btn" id="eraser-mode" title="Modalità Gomma (Ctrl + G)"><i
+                    <button class="current-modality-btn" id="eraser-mode" title="Modalità Gomma (Ctrl + G)" tabindex="14"><i
                             class="fa-solid fa-eraser"></i></button>
-                    <button class="current-modality-btn" id="shape-mode" title="Modalità Figure (Ctrl + H)"><i
+                    <button class="current-modality-btn" id="shape-mode" title="Modalità Figure (Ctrl + H)" tabindex="15"><i
                             class="fa-solid fa-shapes"></i></button>
-                    <button class="current-modality-btn" id="text-mode" title="Modalità Testo (Ctrl + J)"><i class="fa-solid fa-font"></i></button>
+                    <button class="current-modality-btn" id="text-mode" title="Modalità Testo (Ctrl + J)" tabindex="16"><i class="fa-solid fa-font"></i></button>
                 </div>
                 <p>Modalità</p>
             </div>
@@ -128,7 +129,7 @@
 
             <div class="brushes-container">
                 <div>
-                    <select name="brushes" id="brushes" title="Imposta tipo Pennello">
+                    <select name="brushes" id="brushes" title="Imposta tipo Pennello" tabindex="17">
                         <option value="brush">Pennello</option>
                         <option value="bright-brush">Ombreggiato</option>
                         <option value="shadow-graduate">Graduale</option>
@@ -140,7 +141,7 @@
             <div class="shapes-container">
                 <div class="shapes-content">
                     <div class="shapes-group">
-                        <select id="shapes" title="Imposta Figura Geometrica">
+                        <select id="shapes" title="Imposta Figura Geometrica" tabindex="18">
                             <option value="line">Linea</option>
                             <option value="arrow">Freccia</option>
                             <option value="rectangle">Rettangolo</option>
@@ -153,7 +154,7 @@
                     </div>
                     <div class="shapes-group">
                         <input type="checkbox" id="fill-color">
-                        <label for="fill-color" title="Riempimento Figure Geometriche"><i
+                        <label for="fill-color" title="Riempimento Figure Geometriche" tabindex="19"><i
                                 class="fa-solid fa-fill-drip"></i></label>
                     </div>
                 </div>
@@ -161,7 +162,7 @@
             </div>
             <div class="vertical-divider-90"></div>
             <div class="clear-all-container">
-                <div id="clear-all-btn" title="Elimina tutto (Ctrl + C)"><i class="fa-solid fa-broom"></i></div>
+                <div id="clear-all-btn" title="Elimina tutto (Ctrl + C)" tabindex="20"><i class="fa-solid fa-broom" ></i></div>
                 <p>Elimina Tutto</p>
             </div>
             <div class="vertical-divider-90"></div>
@@ -171,14 +172,14 @@
         <div class="sections" id="settings-section">
             <div class="width-container">
                 <div>
-                    <input type="number" id="width-input" min="1" max="10000" title="Larghezza della tela">
+                    <input type="number" id="width-input" min="1" max="10000" title="Larghezza della tela" tabindex="21">
                 </div>
                 <p>Larghezza</p>
             </div>
             <div class="vertical-divider-90"></div>
             <div class="height-container">
                 <div>
-                    <input type="number" id="height-input" min="1" max="10000" title="Altezza della tela">
+                    <input type="number" id="height-input" min="1" max="10000" title="Altezza della tela" tabindex="22">
                 </div>
                 <p>Altezza</p>
             </div>
@@ -186,7 +187,7 @@
             <div class="light-dark-mode">
                 <div>
                     <label class="switch-mode" title="Cambia modalità chiara/scura">
-                        <input type="checkbox" id="switch-mode-btn">
+                        <input type="checkbox" id="switch-mode-btn" tabindex="23">
                         <span class="slider-switch-mode"></span>
                     </label>
                 </div>
@@ -195,7 +196,7 @@
             <div class="vertical-divider-90"></div>
             <div class="background-canvas-container">
                 <div>
-                    <input type="color" id="canvas-background" title="Modifica colore tela">
+                    <input type="color" id="canvas-background" title="Modifica colore tela" tabindex="24">
                 </div>
                 <p>Colore Tela</p>
             </div>
@@ -204,11 +205,11 @@
             <div class="autosave-container">
                 <div>
                     <label class="autosave-mode" title="Salvataggio automatico file">
-                        <input type="checkbox" id="autosave-mode-btn">
+                        <input type="checkbox" id="autosave-mode-btn" tabindex="25">
                         <span class="slider-autosave-mode"></span>
                     </label>
 
-                    <select id="autosave-time" title="Intervallo di tempo salvataggio automatico">
+                    <select id="autosave-time" title="Intervallo di tempo salvataggio automatico" tabindex="26">
                         <option value="3">3s</option>
                         <option value="5" selected>5s</option>
                         <option value="10">10s</option>
@@ -224,7 +225,7 @@
 
             <div class="download-export-type-container">
                 <div>
-                    <select id="download-export-type-select" title="Seleziona tipo file">
+                    <select id="download-export-type-select" title="Seleziona tipo file" tabindex="27">
                         <option value="jpeg">JPEG</option>
                         <option value="png">PNG</option>
                     </select>
@@ -236,7 +237,7 @@
 
             <div class="download-manual-container">
                 <div>
-                    <div id="download-manual" title="Scarica Manuale di Istruzioni"><i class="fa-regular fa-file-pdf"></i></div>
+                    <div id="download-manual" tabindex="28" title="Scarica Manuale di Istruzioni" class="button-focus-div"><i class="fa-regular fa-file-pdf"></i></div>
                 </div>
                 <p>Scarica Manuale</p>
             </div>
@@ -283,7 +284,7 @@
                 </div>
 
                 <div>
-                    <select id="zoom-select" title="Livello di zoom attuale">
+                    <select id="zoom-select" title="Livello di zoom attuale" tabindex="29">
                         <option value="50">50%</option>
                         <option value="100" selected>100%</option>
                         <option value="150">150%</option>
@@ -304,13 +305,13 @@
                 </div>
 
                 <div class="zoom-input-container">
-                    <div id="zoom-minus" title="Diminuisci Zoom (Ctrl -)"><i
+                    <div id="zoom-minus" title="Diminuisci Zoom (Ctrl -)" tabindex="30"><i
                             class="fa-solid fa-magnifying-glass-minus"></i></div>
                     <div>
                         <input type="range" id="zoom-range-input" min="50" max="800" step="50" value="100"
-                            title="Input Zoom">
+                            title="Input Zoom" tabindex="31">
                     </div>
-                    <div id="zoom-plus" title="Aumenta Zoom (Ctrl +)"><i
+                    <div id="zoom-plus" title="Aumenta Zoom (Ctrl +)" tabindex="32"><i
                             class="fa-solid fa-magnifying-glass-plus"></i></i></div>
                 </div>
             </div>
@@ -322,13 +323,13 @@
         <h2>Salvataggio</h2>
         <div class="save-subcontainer">
             <div class="save-navbar">
-                <div class="save-navbar-item" onclick="saveSectionShow('save-view-all')" id="save-view-all-btn"
-                    title="Visualizza tutti i salvataggi (Ctrl + Alt + V)">
+                <div class="save-navbar-item button-focus-div" onclick="saveSectionShow('save-view-all')" id="save-view-all-btn"
+                    title="Visualizza tutti i salvataggi (Ctrl + Alt + V)" tabindex="33">
                     <div class="save-navbar-icon"><i class="fa-solid fa-images fa-xl"></i></div>
                     <div class="save-navbar-content">Visualizza Tutto</div>
                 </div>
-                <div class="save-navbar-item" onclick="saveSectionShow('save-new-image')" id="save-new-image-btn"
-                    title="Crea un nuovo file (Ctrl + Alt + N)">
+                <div class="save-navbar-item button-focus-div" onclick="saveSectionShow('save-new-image')" id="save-new-image-btn"
+                    title="Crea un nuovo file (Ctrl + Alt + N)" tabindex="34">
                     <div class="save-navbar-icon"><i class="fa-solid fa-image fa-xl"></i></div>
                     <div class="save-navbar-content">Nuovo</div>
                 </div>

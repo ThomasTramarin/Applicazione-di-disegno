@@ -1529,3 +1529,15 @@ window.addEventListener("keydown", (e) => {
     initialScaleBtn.click();
   }
 });
+
+//Focus div
+const buttonsFocusDiv = document.querySelectorAll(".button-focus-div");
+
+buttonsFocusDiv.forEach((button)=>{
+  button.addEventListener("keypress", (e)=>{
+    if(e.key == "Enter" || e.key == " "){
+      e.target.click();
+      console.log(e)
+    }
+  });
+});
